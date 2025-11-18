@@ -96,18 +96,18 @@ Validate trained YOLO11n-seg model [accuracy](https://www.ultralytics.com/glossa
         metrics.box.map  # map50-95(B)
         metrics.box.map50  # map50(B)
         metrics.box.map75  # map75(B)
-        metrics.box.maps  # a list contains map50-95(B) of each category
+        metrics.box.maps  # a list containing mAP50-95(B) for each category
         metrics.seg.map  # map50-95(M)
         metrics.seg.map50  # map50(M)
         metrics.seg.map75  # map75(M)
-        metrics.seg.maps  # a list contains map50-95(M) of each category
+        metrics.seg.maps  # a list containing mAP50-95(M) for each category
         ```
 
     === "CLI"
 
         ```bash
         yolo segment val model=yolo11n-seg.pt  # val official model
-        yolo segment val model=path/to/best.pt  # val custom model
+        yolo segment val model=path/to/best.pt # val custom model
         ```
 
 ## Predict
@@ -139,7 +139,7 @@ Use a trained YOLO11n-seg model to run predictions on images.
 
         ```bash
         yolo segment predict model=yolo11n-seg.pt source='https://ultralytics.com/images/bus.jpg'  # predict with official model
-        yolo segment predict model=path/to/best.pt source='https://ultralytics.com/images/bus.jpg'  # predict with custom model
+        yolo segment predict model=path/to/best.pt source='https://ultralytics.com/images/bus.jpg' # predict with custom model
         ```
 
 See full `predict` mode details in the [Predict](../modes/predict.md) page.
@@ -167,7 +167,7 @@ Export a YOLO11n-seg model to a different format like ONNX, CoreML, etc.
 
         ```bash
         yolo export model=yolo11n-seg.pt format=onnx  # export official model
-        yolo export model=path/to/best.pt format=onnx  # export custom trained model
+        yolo export model=path/to/best.pt format=onnx # export custom trained model
         ```
 
 Available YOLO11-seg export formats are in the table below. You can export to any format using the `format` argument, i.e. `format='onnx'` or `format='engine'`. You can predict or validate directly on exported models, i.e. `yolo predict model=yolo11n-seg.onnx`. Usage examples are shown for your model after export completes.

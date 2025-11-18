@@ -1,7 +1,7 @@
 ---
 comments: true
 description: Explore the Ultralytics Explorer API for dataset exploration with SQL queries, vector similarity search, and semantic search. Learn installation and usage tips.
-keywords: Ultralytics, Explorer API, dataset exploration, SQL queries, similarity search, semantic search, Python API, LanceDB, embeddings, data analysis
+keywords: Ultralytics, Explorer API, dataset exploration, SQL queries, similarity search, semantic search, Python API, embeddings, data analysis
 ---
 
 # Ultralytics Explorer API
@@ -150,8 +150,9 @@ Note: This works using LLMs under the hood so the results are probabilistic and 
 !!! example "Ask AI"
 
     ```python
-    from ultralytics import Explorer
     from ultralytics.data.explorer import plot_query_result
+
+    from ultralytics import Explorer
 
     # create an Explorer object
     exp = Explorer(data="coco128.yaml", model="yolo11n.pt")
@@ -256,8 +257,6 @@ When using large datasets, you can also create a dedicated vector index for fast
 table.create_index(num_partitions=..., num_sub_vectors=...)
 ```
 
-Find more details on the type vector indices available and parameters [here](https://lancedb.github.io/lancedb/ann_indexes/#types-of-index) In the future, we will add support for creating vector indices directly from Explorer API.
-
 ## 5. Embeddings Applications
 
 You can use the embeddings table to perform a variety of exploratory analysis. Here are some examples:
@@ -326,11 +325,11 @@ ax.set_zlabel("Component 3")
 plt.show()
 ```
 
-Start creating your own CV dataset exploration reports using the Explorer API. For inspiration, check out the
+Start creating your own CV dataset exploration reports using the Explorer API. For inspiration, check out the [VOC Exploration Example](explorer.md).
 
 ## Apps Built Using Ultralytics Explorer
 
-Try our GUI Demo based on Explorer API
+Try our [GUI Demo](dashboard.md) based on Explorer API
 
 ## Coming Soon
 

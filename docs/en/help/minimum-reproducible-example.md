@@ -4,7 +4,7 @@ description: Learn how to create effective Minimum Reproducible Examples (MRE) f
 keywords: Ultralytics, YOLO, Minimum Reproducible Example, MRE, bug report, issue resolution, machine learning, deep learning
 ---
 
-# Creating a Minimum Reproducible Example for Bug Reports in Ultralytics YOLO Repositories
+# Creating a Minimal Reproducible Example for Bug Reports
 
 When submitting a bug report for [Ultralytics](https://www.ultralytics.com/) [YOLO](https://github.com/ultralytics) repositories, it's essential to provide a [Minimum Reproducible Example (MRE)](https://stackoverflow.com/help/minimal-reproducible-example). An MRE is a small, self-contained piece of code that demonstrates the problem you're experiencing. Providing an MRE helps maintainers and contributors understand the issue and work on a fix more efficiently. This guide explains how to create an MRE when submitting bug reports to Ultralytics YOLO repositories.
 
@@ -14,7 +14,7 @@ The first step in creating an MRE is to isolate the problem. Remove any unnecess
 
 ## 2. Use Public Models and Datasets
 
-When creating an MRE, use publicly available models and datasets to reproduce the issue. For example, use the `yolov8n.pt` model and the `coco8.yaml` dataset. This ensures that the maintainers and contributors can easily run your example and investigate the problem without needing access to proprietary data or custom models.
+When creating an MRE, use publicly available models and datasets to reproduce the issue. For example, use the `yolo11n.pt` model and the `coco8.yaml` dataset. This ensures that the maintainers and contributors can easily run your example and investigate the problem without needing access to proprietary data or custom models.
 
 ## 3. Include All Necessary Dependencies
 
@@ -54,7 +54,7 @@ import torch
 from ultralytics import YOLO
 
 # Load the model
-model = YOLO("yolov8n.pt")
+model = YOLO("yolo11n.pt")
 
 # Load a 0-channel image
 image = torch.rand(1, 0, 640, 640)
@@ -91,7 +91,7 @@ To create an effective Minimum Reproducible Example (MRE) for bug reports in Ult
 5. **Format Your Code Properly**: Use code blocks to format your code, making it easier to read.
 6. **Test Your MRE**: Ensure your MRE reproduces the issue without modifications.
 
-For a detailed guide, see [Creating a Minimum Reproducible Example](#creating-a-minimum-reproducible-example-for-bug-reports-in-ultralytics-yolo-repositories).
+For a detailed guide, see [Creating a Minimum Reproducible Example](#creating-a-minimal-reproducible-example-for-bug-reports).
 
 ### Why should I use publicly available models and datasets in my MRE for Ultralytics YOLO bug reports?
 
